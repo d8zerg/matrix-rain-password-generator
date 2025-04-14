@@ -26,7 +26,8 @@ void resetConsoleColor()
     std::cout << RESET_TEXT;
 }
 
-int main() {
+int main() 
+{
     std::srand(std::time(nullptr));
     std::vector<std::vector<char>> screen(HEIGHT, std::vector<char>(WIDTH, ' '));
     std::vector<int> columnPositions(WIDTH, -1);
@@ -44,7 +45,7 @@ int main() {
             {
                 if (columnPositions[x] < HEIGHT) 
                 {
-                    screen[columnPositions[x]][x] = static_cast<char>(33 + std::rand() % 94); // Random ASCII char
+                    screen[columnPositions[x]][x] = static_cast<char>(33 + std::rand() % 94);
                 }
 
                 if (columnPositions[x] > 0) 
@@ -54,14 +55,17 @@ int main() {
 
                 columnPositions[x]++;
 
-                if (columnPositions[x] >= HEIGHT) {
+                if (columnPositions[x] >= HEIGHT) 
+                {
                     columnPositions[x] = -1;
                 }
             }
         }
 
-        for (const auto& row : screen) {
-            for (const auto& ch : row) {
+        for (const auto& row : screen) 
+        {
+            for (const auto& ch : row) 
+            {
                 std::cout << ch;
             }
             std::cout << "\n";
