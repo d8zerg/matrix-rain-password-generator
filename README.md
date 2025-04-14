@@ -1,2 +1,2 @@
 # matrix-rain-password-generator
-Password generator with matrix rain animation
+Password generator with the "matrix rain" animation
